@@ -38,7 +38,7 @@ mysql
   .createConnection({
     host: 'sql.freedb.tech',
     database: 'freedb_Netflix_',
-    user: 'root',
+    user: 'freedb_NattaB',
     password: 'Vk2vHrmby!U@H9x',
   })
   .then((connection) => {
