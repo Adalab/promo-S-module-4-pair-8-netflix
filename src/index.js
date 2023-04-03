@@ -36,10 +36,10 @@ server.get('/movies', function (req, res) {
 
 mysql
   .createConnection({
-    host: 'localhost',
-    database: 'Netflix',
+    host: 'sql.freedb.tech',
+    database: 'freedb_Netflix_',
     user: 'root',
-    password: 'L0velace!',
+    password: 'Vk2vHrmby!U@H9x',
   })
   .then((connection) => {
     connection
