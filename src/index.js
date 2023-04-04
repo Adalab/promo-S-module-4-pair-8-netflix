@@ -69,7 +69,7 @@ server.get('/movies', (req, res) => {
   }
   connection
     .query(
-      `SELECT * FROM MOVIES WHERE genre LIKE ? ORDER BY ${sortFilterParam}`,
+      `SELECT * FROM MOVIES WHERE genre LIKE ? ORDER BY title ${sortFilterParam}`,
       [genreFilterParam]
     )
     .then(([results, fields]) => {
