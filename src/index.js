@@ -12,7 +12,7 @@ server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
 
-server.get('/movies', function (req, res) {
+/* server.get('/movies', function (req, res) {
   res.json({
     success: true,
     movies: [
@@ -30,9 +30,12 @@ server.get('/movies', function (req, res) {
         image:
           '//beta.adalab.es/curso-intensivo-fullstack-recursos/apis/netflix-v1/images/friends.jpg',
       },
+
     ],
   });
-});
+}); */
+
+let connection;
 
 mysql
   .createConnection({
@@ -41,11 +44,12 @@ mysql
     user: 'freedb_NattaB',
     password: 'Vk2vHrmby!U@H9x',
   })
-  .then((connection) => {
+  .then((conn) => {
+    connection = conn;
     connection
       .connect()
       .then(() => {
-        console.log('Conectado con el identificador ' + connection.threadId);
+        console.log('Conectado con el identificador ' + conn.threadId);
       })
       .catch((err) => {
         console.error('Error de conexion: ' + err.stack);
@@ -54,3 +58,22 @@ mysql
   .catch((err) => {
     console.error('Error de configuración: ' + err.stack);
   });
+
+server.get('/movies', (req, res) => {
+  console.log('Pidiendo a la base de datos información de las tarjetas.');
+  connection
+    .query('SELECT * FROM MOVIES')
+    .then(([results, fields]) => {
+      console.log('Información recuperada:');
+      results.forEach((result) => {
+        console.log(result);
+      });
+      res.json({
+        success: true,
+        movies: results,
+      });
+    })
+    .catch((err) => {
+      throw err;
+    });
+});
