@@ -61,13 +61,23 @@ mysql
 
 server.get('/movies', (req, res) => {
   console.log('Pidiendo a la base de datos información de las tarjetas.');
+  let genreFilterParam = req.query.genre;
+  let sortFilterParam = req.query.sort;
+
+  if (genreFilterParam === '') {
+    genreFilterParam = '%';
+  }
   connection
-    .query('SELECT * FROM MOVIES')
+    .query(
+      `SELECT * FROM MOVIES WHERE genre LIKE ? ORDER BY ${sortFilterParam}`,
+      [genreFilterParam]
+    )
     .then(([results, fields]) => {
       console.log('Información recuperada:');
       results.forEach((result) => {
         console.log(result);
       });
+
       res.json({
         success: true,
         movies: results,
