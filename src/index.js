@@ -4,7 +4,7 @@ const mysql = require('mysql2/promise');
 // create and config server
 const server = express();
 server.use(cors());
-server.use(express.json());
+server.use(express.json({ limit: '10mb' }));
 
 // init express aplication
 const serverPort = 4000;
@@ -63,13 +63,15 @@ server.get('/movies', (req, res) => {
   console.log('Pidiendo a la base de datos información de las tarjetas.');
   let genreFilterParam = req.query.genre;
   let sortFilterParam = req.query.sort;
+  console.log(sortFilterParam);
 
-  if (genreFilterParam === '') {
+  if (!genreFilterParam) {
     genreFilterParam = '%';
   }
+  console.log(genreFilterParam);
   connection
     .query(
-      `SELECT * FROM MOVIES WHERE genre LIKE ? ORDER BY title ${sortFilterParam}`,
+      `SELECT * FROM MOVIES WHERE genre LIKE ?ORDER BY title ${sortFilterParam}`,
       [genreFilterParam]
     )
     .then(([results, fields]) => {
