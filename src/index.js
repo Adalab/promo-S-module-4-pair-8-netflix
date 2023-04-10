@@ -89,3 +89,11 @@ server.get('/movies', (req, res) => {
       throw err;
     });
 });
+
+const port = process.env.PORT||4000;
+const dbConnect = require('../config/connection');
+dbConnect();
+
+app.listen (port, () => {
+  console.log('servidor a su servicio en el puerto', PORT);
+})
