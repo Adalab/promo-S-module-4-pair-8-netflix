@@ -90,6 +90,38 @@ server.get('/movies', (req, res) => {
     });
 });
 
+//copiado apuntes para modificar para el login
+server.post('/login', (req, res) => {
+  console.log('Body params:', req.body);
+  console.log('Body param password:', req.body.password);
+  console.log('Body param Email:', req.body.email);
+  let email = req.body.email;
+  let password = req.body.password;
+  connection
+    .query(`SELECT * FROM USERS WHERE email = ? AND password  = ?`, [
+      email,
+      password,
+    ])
+    .then(([results]) => {
+      console.log('Información recuperada:');
+      console.log(results[0].user);
+      if (results.length === 0) {
+        res.json({
+          success: false,
+          errorMessage: 'Usuaria/o no encontrada/o',
+        });
+      } else {
+        res.json({
+          success: true,
+          userId: results[0].id,
+        });
+      }
+    })
+    .catch((err) => {
+      throw err;
+    });
+});
+
 /* const port = process.env.PORT||4000;
 const dbConnect = require('../config/connection');
 dbConnect();
