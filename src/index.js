@@ -104,7 +104,7 @@ server.post('/login', (req, res) => {
     ])
     .then(([results]) => {
       console.log('Información recuperada:');
-      console.log(results[0].user);
+      console.log(results);
       if (results.length === 0) {
         res.json({
           success: false,
@@ -113,7 +113,7 @@ server.post('/login', (req, res) => {
       } else {
         res.json({
           success: true,
-          userId: results[0].Id,
+          userId: results[0].idUser,
         });
       }
     })
