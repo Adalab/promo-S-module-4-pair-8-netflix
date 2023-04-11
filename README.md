@@ -7,14 +7,14 @@ Por favor marca a continuación los ejercicios que hayáis terminado:
 **4.1 MYSQL I:**
 
 - [x] 1.  Crea la base de datos.
-- [ ] 2.  Inserta valores a la bases de datos.
-- [ ] 3.  Crea un repositorio en Github.
+- [x] 2.  Inserta valores a la bases de datos.
+- [x] 3.  Crea un repositorio en Github.
 
 **4.2 MYSQL II:**
 
-- [ ] 1.  Consultas sobre las películas
-- [ ] 2.  Consultas sobre los actores.
-- [ ] 3.  Consultas sobre los usuarios.
+- [x] 1.  Consultas sobre las películas
+- [x] 2.  Consultas sobre los actores.
+- [x] 3.  Consultas sobre los usuarios.
 - [ ] 4.  Bonus: Agrega más campos a las tablas.
 
 **4.3 MYSQL III:**
@@ -25,20 +25,20 @@ Por favor marca a continuación los ejercicios que hayáis terminado:
 
 **4.4 Node JS:**
 
-- [ ] 1. Descarga el proyecto
-- [ ] 2. Arranca el backend
-- [ ] 3. Arranca el front end
-- [ ] 4. Prueba el proyecto
-- [ ] 5. Entiende el código del proyecto
+- [x] 1. Descarga el proyecto
+- [x] 2. Arranca el backend
+- [x] 3. Arranca el front end
+- [x] 4. Prueba el proyecto
+- [x] 5. Entiende el código del proyecto
 
 **4.5 Express JS I:**
 
-- [ ] 1. Pide todas las películas
+- [x] 1. Pide todas las películas
 
 **4.6 Express JS II:**
 
-- [ ] 1. Filtrar por género
-- [ ] 2. Ordenar por nombre
+- [x] 1. Filtrar por género
+- [x] 2. Ordenar por nombre
 - [ ] 3. Login
 - [ ] 4. Bonus: Mantén logueada a la usuaria
 
@@ -56,12 +56,12 @@ Por favor marca a continuación los ejercicios que hayáis terminado:
 
 **4.8 Mongo I:**
 
-- [ ] 1. Configura MongoDB Atlas
-- [ ] 2. Crea la bases de datos Netflix
+- [x] 1. Configura MongoDB Atlas
+- [x] 2. Crea la bases de datos Netflix
 
 **4.9 Mongo II:**
 
-- [ ] 1. Conexión con la bases de datos de MongoDB
+- [x] 1. Conexión con la bases de datos de MongoDB
 - [ ] 2. Modelos para las colecciones
 - [ ] 3. Listado de películas
 - [ ] 4. Ordena por nombre

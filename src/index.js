@@ -90,10 +90,10 @@ server.get('/movies', (req, res) => {
     });
 });
 
-const port = process.env.PORT||4000;
+/* const port = process.env.PORT||4000;
 const dbConnect = require('../config/connection');
 dbConnect();
 
 app.listen (port, () => {
   console.log('servidor a su servicio en el puerto', PORT);
-})
+}) */
