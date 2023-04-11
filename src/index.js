@@ -113,7 +113,7 @@ server.post('/login', (req, res) => {
       } else {
         res.json({
           success: true,
-          userId: results[0].id,
+          userId: results[0].Id,
         });
       }
     })

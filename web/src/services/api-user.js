@@ -25,8 +25,8 @@ const sendLoginToApi = (data) => {
       } else {
         return {
           success: false,
-
-sendSingUpToApi = (data) => {
+*/
+const sendSingUpToApi = (data) => {
   console.log('Se están enviando datos al signup:', data);
   // CAMBIA ESTE FETCH PARA QUE APUNTE A UN ENDPOINT DE TU SERVIDOR, PIENSA SI DEBE SER GET O POST, PIENSA QUÉ DATOS DEBES ENVIAR, ETC
   return fetch(
@@ -98,13 +98,12 @@ const getUserMoviesFromApi = (userId) => {
       };
     });
 };
-/*  */
 const objToExport = {
   sendLoginToApi: sendLoginToApi,
-  /*   sendSingUpToApi: sendSingUpToApi,
+  sendSingUpToApi: sendSingUpToApi,
   sendProfileToApi: sendProfileToApi,
   getProfileFromApi: getProfileFromApi,
-  getUserMoviesFromApi: getUserMoviesFromApi, */
+  getUserMoviesFromApi: getUserMoviesFromApi,
 };
 
 export default objToExport;
