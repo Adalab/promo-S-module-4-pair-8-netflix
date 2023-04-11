@@ -18,7 +18,7 @@ const MoviesList = props => {
   };
 
   const renderEmptyList = () => {
-    return <p>No hay películas en este listado</p>;
+    return <p className="p">No hay películas en este listado</p>;
   };
 
   return props.movies.length ? renderMovieList() : renderEmptyList();

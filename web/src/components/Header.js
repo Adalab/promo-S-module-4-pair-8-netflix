@@ -7,12 +7,12 @@ const Header = props => {
       return (
         <>
           <li className="nav__item">
-            <Link className="nav__link" to="/login">
+            <Link className="nav__link button" to="/login">
               Login
             </Link>
           </li>
           <li className="nav__item">
-            <Link className="nav__link" to="/signup">
+            <Link className="nav__link button" to="/signup">
               Registro
             </Link>
           </li>
