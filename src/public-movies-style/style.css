@@ -1,0 +1,43 @@
+
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.title {
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 3px black;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: xx-large;
+    font-weight: 300;
+}
+
+.img {
+    height: 40vh;
+    box-shadow: 3px 3px 3px black;
+}
+
+.genre{
+   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-size:x-large;
+   font-weight: bold;
+   border-bottom: 2px solid black;
+   box-shadow: 1px 1px 3px black;
+   padding: 10px;
+}
+
+.category{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: oblique;
+    
+}
+
+.year{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+    font-size: larger;
+    text-shadow: 1px 1px 1px black;
+}

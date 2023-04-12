@@ -1,7 +1,27 @@
-<h1>Hola Mundo</h1>
-<p>
-    <%= name %>
-</p>
-<p>
-    <%= genre %>
-</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="https://cdn.jim-nielsen.com/ios/512/netflix-2018-11-01.png" />
+    <link rel="stylesheet" href="/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Netflix</title>
+  </head>
+  <body class="page">
+    <h1 class="title"><%= title %></h1>
+    <img class="img" src="<%= image %>" alt="imagen de película" />
+
+    <p class="genre">
+        <%= genre %>
+    </p>
+     <p class="category"><%= category %></p>
+    <p class="year"><%= year %></p>
+    <div id="root"></div>
+  </body>
+</html>
+
+
+
+
+
+

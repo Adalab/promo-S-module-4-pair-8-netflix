@@ -129,7 +129,7 @@ server.get('/movie/:movieId', (req, res) => {
   connection
     .query(`SELECT * FROM MOVIES WHERE id = ?`, [foundMovie])
     .then(([results, fields]) => {
-      res.render('movie');
+      res.render('movie', results[0]);
     })
     .catch((err) => {
       throw err;
@@ -149,3 +149,8 @@ server.use(express.static(staticServerPathWeb));
 
 const staticServerPathWebImages = './src/public-movies-images'; // En esta carpeta ponemos los ficheros estáticos
 server.use(express.static(staticServerPathWebImages));
+
+// const staticServerPathWebStyle = './src/public-movies-style'; // En esta carpeta ponemos los ficheros estáticos
+// server.use(express.static(staticServerPathWebStyle));
+
+server.use(express.static('./src/public-movies-style'));
