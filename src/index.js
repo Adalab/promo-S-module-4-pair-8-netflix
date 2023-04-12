@@ -5,6 +5,7 @@ const mysql = require('mysql2/promise');
 const server = express();
 server.use(cors());
 server.use(express.json({ limit: '10mb' }));
+server.set('view engine', 'ejs');
 
 // init express aplication
 const serverPort = 4000;
@@ -116,6 +117,19 @@ server.post('/login', (req, res) => {
           userId: results[0].idUser,
         });
       }
+    })
+    .catch((err) => {
+      throw err;
+    });
+});
+
+server.get('/movie/:movieId', (req, res) => {
+  const foundMovie = req.params.movieId;
+  console.log(req.params.movieId);
+  connection
+    .query(`SELECT * FROM MOVIES WHERE id = ?`, [foundMovie])
+    .then(([results, fields]) => {
+      res.render('movie');
     })
     .catch((err) => {
       throw err;
